@@ -1,16 +1,13 @@
-import { Component } from "react";
-import "./search-box-styles.css"
+import "./search-box-styles.css";
 
-class SearchBox extends Component {
-        render(){
-            return(
-                <input
-                 type="search"
-                placeholder={this.props.placeholder} 
-                onChange={this.props.onSearchHandler}
-                className={`search-box ${this.props.className}`}/>
-            )
-        }
-}
+const SearchBox = ({ className, placeholder, onSearchHandler }) => (
+  <input
+  className={`search-box ${className}`}
+    type="search"
+    placeholder={placeholder}
+    onChange={onSearchHandler}
+    
+  />
+);
 
-export default SearchBox
+export default SearchBox;
